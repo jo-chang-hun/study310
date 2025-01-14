@@ -1,0 +1,191 @@
+/* 언어설정 */
+@charset 'utf-8';
+
+/* 전체설정 */
+
+*{margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a{text-decoration: none;
+color: #000;}
+img {border: none;
+    vertical-align: bottom;}
+
+
+/* 레이아웃 설정 */
+#wrap {display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;}
+
+
+.header {width: 100%;
+        height: 50px;
+        background-color: beige;}
+
+.slider {width: 100%;
+        height: 200px;
+        background-color: gray;}
+
+.application {width: 50%;
+            height: 50px;
+            background-color: greenyellow;}
+
+.reservation {width: 50%;
+            height: 50px;
+            background-color: yellow;}
+
+.adoption_rev {width: 50%;
+                height: 200px;
+                background-color: aqua;}
+
+.structure_rev {width: 50%;
+                height: 200px;
+                background-color: aquamarine;}
+
+.status {width: 50%;
+        height: 150px;
+        background-color: palevioletred;}
+
+.report_center {width: 50%;
+                height: 150px;
+                background-color: pink;}
+
+.coping_tips {width: 100%;
+            height: 100px;
+            background-color: blueviolet;}
+
+.picture {width: 100%;
+        height: 120px;
+        background-color: #bd6b6b;}
+
+.find {width: 100%;
+        height: 120px;
+        background-color: #7b0f0f;}
+
+.announcement {width: 30%;
+            height: 100px;
+            background-color: #c067f6;}
+
+.notice {width: 20%;
+        height: 100px;
+        background-color: #b982db;}
+
+.etiquette {width: 20%;
+        height: 100px;
+        background-color: #e6befe;}
+
+.facilities {width: 30%;
+            height: 100px;
+            background-color: #939394;}
+
+.youtube {width: 100%;
+        height: 150px;
+        background-color: #fa3636;}
+
+.map {width: 50%;
+    height: 180px;
+    background-color: #48ff65;}
+
+.introduction {width: 50%;
+            height: 180px;
+            background-color: #368c0d;}
+
+
+/* 미디어 쿼리구간설정 ###################################################################################### */
+/* 1280px 이상일때 */
+@media(min-width:1290px)
+{
+#wrap {max-width: 1200px;}
+}
+
+/* 1024px 이하일때 */
+@media(max-width:1024px)
+{
+#wrap {min-width: 90%;}
+}
+
+/* 600px 이하일때 */
+@media(max-width:600px)
+{
+
+    .header {width: 100%;
+        height: 50px;
+        }
+
+.slider {width: 100%;
+        height: 200px;
+        }
+
+.application {width: 100%;
+            height: 100px;
+            }
+
+.reservation {width: 100%;
+            height: 100px;
+            }
+
+.adoption_rev {width: 100%;
+                height: 200px;
+                }
+
+.structure_rev {width:100%;
+                height: 200px;
+                }
+
+.status {width: 100%;
+        height: 200px;
+        }
+
+.report_center {width: 100%;
+                height: 200px;
+                }
+
+.coping_tips {width: 100%;
+            height: 150px; 
+            }
+
+.picture {width: 100%;
+        height: 150px;
+        }
+
+.find {width: 100%;
+        height: 200px;
+       }
+ 
+.announcement {width: 100%;
+            height: 100px;
+            }
+
+.notice {width: 20%;
+        height: 100px;
+        background-color: #b982db;
+        display: none;}
+
+.etiquette {width: 100%;
+        height: 150px;
+        }
+
+.facilities {width: 100%;
+            height: 100px;
+            }
+
+.youtube {width: 100%;
+        height: 150px;
+        background-color: #fa3636;
+        display: none;}
+
+.map {width: 100%;
+    height: 180px;
+    }
+
+.introduction {width: 100%;
+            height: 180px;
+            }
+
+
+
+#wrap{width: 100%;}
+
+}
