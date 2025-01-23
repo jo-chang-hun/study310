@@ -1,0 +1,418 @@
+@charset "utf-8";
+
+/*전체설정*/
+body {font-family: '맑은고딕',sans-serif}
+* {margin: 0;
+	padding: 0}
+ul,ol {list-style: none;}
+a {color: #333;
+text-decoration: none;}
+img {border:none;}
+
+
+
+
+/*사이트설정*/
+.site {}
+.site h1 {}
+.site a {}
+/*.site img {width: 250px;
+			height: 33px}*/
+/*네비게이션설정*/
+
+.menu {}
+.menu ul {}
+
+.menu li a {font-size: 14px;
+			padding: 10px 15px;
+			display: block;}
+.menu li a:hover {background: #eee /*임시*/}			
+	
+
+
+
+/*헤더그림*/
+.topimg {vertical-align:bottom;
+width: 100%;
+height: auto;}	
+
+
+/*캐치카피*/
+
+.top {position: relative;}
+
+.catch {font-size: 28px;
+		position: absolute;
+		bottom: 7%;
+		left: 3%;
+		padding: 15PX;
+		background: rgba(255,255,255,0.7);	
+}
+
+
+/*개요*/
+.summary {}
+.summary a{display: block;
+			text-align: center;
+			background: #222;
+			color: #fff;
+		}
+.summary i {font-size: 38px;
+			padding-top: 40px;
+			padding-bottom: 40px;
+			display: block;}		
+.summary h1{font-size: 20px;
+	padding-top: 5px;
+			padding-bottom: 5px;
+			font-weight: normal;}
+.summary p {background: #524e3c;
+	padding-top: 15px;
+	padding-bottom: 15px;
+font-size: 12px;}
+
+.fa-database {background: #bfbd13}
+.fa-chart-bar {background:#c58839 }
+.fa-envelope {background:#859f46 }
+
+
+
+/*공지사항*/
+.news {border: solid 5px #ddd;
+padding: 20px}
+.news h1 {margin-bottom: 5px;
+		font-size: 18px;
+		color: #666}
+.news ul {}
+.news li {}
+.news a {color: #000;
+			font-size: 14px;
+			padding: 5px;
+			display: block;
+			border-bottom: 2px dotted #ddd}
+.news a:hover {background: #eee}			
+.news time {
+			color: #888;
+			font-weight: bold; }
+
+
+
+.news a:after {display: block;
+				content: "";
+				clear: both;}
+.news time {float: left;
+			width: 60px;}
+.news .text {float: none;
+			width: auto;
+			margin-left: 60px}
+
+
+
+
+/*sns 메뉴*/
+.follow {}
+.follow ul {}
+.follow li {}
+.follow a {display: block;
+			padding: 10px;
+			background: #ddd;
+			color: #fff;
+			font-size: 14px;
+			margin-bottom: 10px;
+			border-radius: 4px}
+.follow li:nth-child(1) a {background: #1da1f2}	
+.follow li:nth-child(2) a {background: #3b5998}	
+.follow li:nth-child(3) a {/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#833ab4+0,c13584+100 */
+background: #833ab4; /* Old browsers */
+background: -moz-linear-gradient(left,  #833ab4 0%, #c13584 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #833ab4 0%,#c13584 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #833ab4 0%,#c13584 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#833ab4', endColorstr='#c13584',GradientType=1 ); /* IE6-9 */
+}			
+.follow a:hover {opacity: 0.8}					
+.follow i {margin-right: 10px;
+			font-size: 24px;
+			vertical-align: top}
+
+/*추가설명*/
+.follow-info {background: #ddd;
+			text-align: center;
+			font-size: 14px;
+			padding: 10px;
+			margin-bottom: 20px}
+
+
+.follow-info {
+	position: relative;
+	background: #ddd;
+}
+.follow-info:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(221, 221, 221, 0);
+	border-top-color: #ddd;
+	border-width: 15px;
+	margin-left: -15px;
+}							
+
+
+
+
+/*저작권*/
+.copyright {}
+.copyright p {color: #666;
+			font-size: 14px}	
+
+/*푸터를 바 형태로 디자인*/
+.box5 {background: #ddd;
+	padding-top: 15px;
+		padding-bottom: 15px}
+
+
+/*메뉴버튼설정*/
+#menubtn {position: absolute;	
+			top: 20px;
+			right: 15px;
+			padding: 6px 12px;
+			background: #fff;
+			border: 1px solid #aaa;
+			border-radius: 5px;
+			cursor: pointer;}
+
+#menubtn i {font-size: 18px;
+			color: #888}
+#menubtn span {text-indent: -9999px;
+				display: inline-block;}
+
+
+#menubtn:focus {outline: none}	
+#menubtn:hover {background: #ddd}			
+
+/*박스의왼쪽 오른쪽*/
+.boxA,.box4,.box5,.box6,.box7 {padding-left: 15px;
+		padding-right: 15px}	
+/*박스의 위 아래 */
+.boxA {padding-top: 20px;
+		padding-bottom: 10px}
+.box4 {padding-top: 20px;
+	padding-bottom: 20px}
+
+.box4-1 {padding-bottom: 20px}
+.box6 {padding-top: 20px}
+.box6-1,.box6-2,.box6-3 {padding-bottom: 10px}
+
+.box7 {padding-top: 25px;
+		padding-bottom: 25px}
+
+
+/*전체배경색이 있는경우
+.boxA {background: skyblue}
+.box4 {background: olive}*/	
+.ex {width: 20px;
+	background: #000;
+	height: 100%;
+	position: fixed;
+top: 0;
+left: 0;
+color: #fff}
+
+/*서브001페이지*********************/
+.sub001 .boxA{border-bottom: 1px solid #ddd;
+		}
+
+/*본문내용*/
+.story h1 {font-size: 36px;
+margin-bottom: 20px;
+border-left: 20px solid #c50018;
+padding-left: 20px;
+font-weight: normal;}
+.story img {max-width: 100%;
+			height: auto;
+			vertical-align: bottom;}
+
+
+
+.story p {margin-bottom: 20px;
+		max-width: 768px;}
+
+
+.story .lead {font-size: 20px;
+			color: #666;
+			max-width: 100%}		
+.story h2 {margin-bottom: 20px;
+	margin-top: 50px;
+			font-size: 28px;
+			font-weight: normal;
+			border-bottom: 1px solid #ddd
+}
+
+.story h2 i {color: #888;
+			margin-right: 7px}
+
+
+/*서브메뉴*/
+.submenu {border: 6px solid #ddd}
+.submenu h1 {padding: 10px;
+font-size: 16px;
+font-weight: normal;
+}
+.submenu h1 i {font-size: 18px;
+vertical-align: bottom;
+margin-right: 5px;
+color: #8abc60}
+.submenu ul {}
+.submenu li {}
+.submenu a {display: block;
+			padding: 10px;
+			color: #000;
+			font-weight: 14px;
+			border-top: 1px solid #ddd}
+
+.submenu a:hover {background: #eee}
+
+
+/*빵부스러기메뉴*/
+.bread {margin-bottom: 20px}
+.bread ol {}
+.bread li {}
+.bread a {display:inline-block;
+		padding: 5px;
+		font-size: 14px;}
+
+.bread a:hover {background: #eee}
+.bread ol:after {display: block;
+				content: "";
+				clear: both;}
+.bread li {float: left;
+			width: auto;}	
+.bread li:after {content: "\003e"}						
+
+
+/*미디어쿼리구간*/
+
+
+/*##################599px이하######################*/
+@media(max-width: 599px) {
+
+
+/*네비게이션*/
+.menu li a {font-size: 11px;
+			padding: 10px 7px;
+			}
+
+
+			/*캐치카피*/
+
+			.catch{font-size: 12px;
+					padding: 5px 10px}
+					
+
+
+}
+
+
+/*#################767이하 #########################*/
+@media(max-width: 767px){
+
+
+
+	.menu {display: none}
+}
+
+/*##################768px이상 -태블릿이상########## */
+
+@media(min-width: 768px) {
+
+
+
+	/*박스1과 박스2를 가로정렬하는 설정*/
+
+	.boxA:after {display: block;
+				content: "";
+				clear: both;}
+	.box1  {float: left;
+					width: 50%;
+				}
+	.box2 {float: right;
+			width:auto;}	
+
+			/*박스4-1과 박스 4-2 의 가로정렬*/
+
+.box4:after {display: block;
+			content: "";
+			clear: both;}
+.box4-1 {float: left;
+	width:70%;
+	padding-right: 35px;
+	box-sizing: border-box;}
+.box4-2 {float: left;
+	width: 30%;}	
+
+
+/*박스6-1,6-2,6-3 가로정렬*/
+
+.box6:after {display: block;
+			content: "";
+			clear: both;}
+.box6-1 {float: left;
+		width: 32%;
+		margin-right: 2%}
+.box6-2 {float: left;
+		width: 32%;
+	margin-right: 2%}
+.box6-3 {float: left;
+		width: 32%;}	
+
+
+#menubtn {display: none}
+
+
+.menu {display: block !important;}	
+
+
+	/*메뉴가로정렬*/
+	.menu ul:after {display: block;
+					content: "";
+					clear: both;}
+	.menu li {float: left;
+			width: auto;}	
+
+
+
+
+/*박스7-1과 7-2 가로정렬*/
+.box7:after {display: block;
+			content: "";
+			clear: both;}
+.box7-1 {float: right;
+		width: 80%;
+		padding-left: 50px;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;}
+.box7-2 {float: left;
+		width: 20%}								
+
+}
+
+
+
+
+/*#################1280px 이상일때################*/
+@media(min-width: 1280px) {
+/*전체너비를 고정*/
+.box3 ,.box4 ,.copyright,.boxA-inner,.box6,.box7{width: 1240px;
+			margin-left: auto;
+			margin-right: auto;}
+.boxA{border-bottom: 1px solid #ddd;
+		margin-bottom: 20px}			
+
+
+
+
+}

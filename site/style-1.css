@@ -1,0 +1,126 @@
+/* 언어설정 */
+@charset 'utf-8';
+
+/* 전체설정 */
+*{margin: 0%;
+padding: 0;}
+ul,ol {list-style: none;}
+a {color: #000;
+    text-decoration: none;}
+img {border: none;
+    vertical-align: bottom;}
+
+/* ############################################## */
+
+.site {}
+.site h1 {font-size: 30px;}
+.site h1 a {}
+
+
+/* ################################################## */
+
+nav {}
+nav ul {display: flex;
+        justify-content: flex-end;}
+nav ul li {}
+nav ul li a {display: block;
+            font-size: 14px;
+            padding: 10px 15px;}
+
+/* ###################################################### */
+
+.Box3 img {width: 100%;}
+
+/* ###################################################### */
+
+.notice {}
+.notice h2 {margin-bottom: 5px;
+            font-size: 18px;
+            color: #666;}
+.notice ul {}
+.notice ul li {}
+.notice ul li a {display: block;
+                padding: 5px;
+                font-size: 14px;
+                color: #000;
+                border-bottom: dotted 2px #ddd;}
+
+.notice time {margin-right: 10px;
+            color: #888;}
+
+.notice ul li a:hover {background-color: #eee;}
+
+.notice ul li a {display: flex;
+                flex-wrap: nowrap;}
+
+.notice .text {width: auto;}
+
+/* #################################################### */
+
+.copyright {}
+.copyright p {color: #666;
+            font-size: 16px;}
+
+/* 박스A아래 경계선 */
+.BoxA {border-bottom: 1px solid #ddd;
+        margin-bottom: 20px;}
+
+
+/* 박스5를 바형태로 */
+.Box5   {background-color: #ddd;
+        padding-top: 15px;
+        padding-bottom: 15px;}
+
+/* 박스위아래 간격 */
+.BoxA {padding-top: 20px;
+        padding-bottom: 10px;}
+.Box4 {padding-top: 20px;
+        padding-bottom: 20px;}
+
+
+/* 박스 왼/오른쪽 여백 */
+
+.BoxA, .Box4, .Box5 {padding-left: 15px;
+                    padding-right: 15px;}
+
+
+/* 미디어 쿼리구간 */
+
+/* 599px 이하 */
+@media(max-width:599px) {
+
+nav ul {justify-content: center;}
+nav ul li a {font-size: 11px;
+            padding: 10px 7px;}
+
+}
+
+/* 768px 이상 */
+@media(min-width:768px) {
+
+/* 박스1과 박스2의 가로정렬 */
+/* 플렉스방식의 가로정렬 
+.boxA {display: flex;}
+.box1 {width: 50%;}
+.box2 {width: 50%;}
+*/
+
+/* after정렬 */
+.Box1 {float: left;
+    width: 50%;}
+.Box2 {float: left;
+    width: 50%;}
+.BoxA::after {display: block;
+            content: '';
+            clear: both;}
+
+}
+
+/* 1280px 이상 */
+@media(min-width:1280px) {
+
+.Box3, .Box4, .copyright, .BoxA-inner
+{width: 1280px;
+margin: 0 auto;}
+
+}
