@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기분나쁜성적표만들기</title>
+
+<script>
+    let name = prompt('당신의 이름은 무엇입니까?')
+    console.log(name)
+    document.write('<h1>'+ name + '님 성적을 입력해 주십시오.</h1>')
+
+    
+
+</script>
+
+<style>
+    h1 {color: rgb(30, 207, 198);
+        padding: 20px;
+        width: 600px;
+        margin: 0 auto;
+        border: dotted 2px #ddd;
+        border-radius: 10px;}
+
+    form {margin: 0 auto;
+        padding: 5% 30%;}
+
+    #btn {padding: 10px 10px;
+        font-weight: bold;
+        background-color: black;
+        color: #ddd;
+        margin-top: 20px;
+        margin-left: 40%;}
+    
+    #grade {color: red;
+            font-size: 500px;}
+</style>
+
+</head>
+<body>
+    
+    <form action="">
+        <table border="1">
+            <tr>
+                <td>국어</td>
+                <td>영어</td>
+                <td>수학</td>
+                <td>과학</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="k"></td>
+                <td><input type="text" id="e"></td>
+                <td><input type="text" id="m"></td>
+                <td><input type="text" id="s"></td>
+            </tr>
+            <tr>
+                <td>총점</td>
+                <td id="add">00</td>
+                <td>평균</td>
+                <td id="ever">00</td>
+            </tr>
+        </table>
+
+        <div><button id="btn">학점확인하기</button></div>
+        <div><p>당신의 학점은 <span id="grade">00</span>입니다.</p></div>
+    </form>
+
+    <script>
+        
+
+        document.getElementById('btn').addEventListener('click',function(e){
+            e.preventDefault()
+
+            let kor = Number(document.getElementById('k').value);
+            let eng = Number(document.getElementById('e').value);
+            let math = Number(document.getElementById('m').value);
+            let sic = Number(document.getElementById('s').value);
+
+            let add = kor + eng + math + sic
+            let ever = add/ 4;
+
+            document.getElementById('add').textContent = add
+            
+            document.getElementById('ever').textContent = ever
+
+
+            let grade ="";
+
+            if(ever>=90)grade ="A"
+            else if(ever<90 && ever>=80) grade ="B"
+            else if(ever<80 && ever>=70) grade ="C"
+            else if(ever<70 && ever>=60) grade ="D"
+            else grade ="F"    
+                
+
+            document.getElementById('grade').textContent = grade
+
+        })
+    </script>
+
+ 
+</body>
+
+</html>
