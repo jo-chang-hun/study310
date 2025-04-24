@@ -78,33 +78,7 @@ $(document).ready(function(){
             let ht = $(window).height();
             console.log(sc);
     
-            // sc 값이 일정구간에 있을때 li에 addClass on 을 붙여라.
-    
-    
-            // if(sc>=(ht*0)-200 && sc<(ht*1)-200){
-            //     $('.gnb li').removeClass('on')
-            //     $('.gnb li').eq(0).addClass('on');
-    
-            // }
-    
-            // if(sc>=(ht*1)-200 && sc<(ht*2)-200){
-            //     $('.gnb li').removeClass('on')
-            //     $('.gnb li').eq(1).addClass('on');
-    
-            // }
-    
-            // if(sc>=(ht*2)-200 && sc<(ht*3)-200){
-            //     $('.gnb li').removeClass('on')
-            //     $('.gnb li').eq(2).addClass('on');
-    
-            // }
-    
-            // if(sc>=(ht*3)-200 && sc<(ht*4)-200){
-            //     $('.gnb li').removeClass('on')
-            //     $('.gnb li').eq(3).addClass('on');
-    
-            // }
-    
+            
     
             // 위의 공식을 반복문으로 변환하기
     
@@ -189,31 +163,7 @@ $(document).ready(function(){
             let x = e.pageX;
             let y = e.pageY;
     
-            /*
-            .p11 {bottom: 110px;
-                right: 110px;}
-            .p12 {bottom: -40px;
-                right: 130px;}
-            .p13 {top: 180px;
-                right: 60px;}
-    
-            .p21 {bottom: -480px;
-                right: -180px;}
-            .p22 {bottom: -40px;
-                right: 130px;}
-    
-            .p31 {bottom: 30px;
-            right: 180px;}
-            .p32 {bottom: -270px;
-            right: 110px;}
-            .p33 {bottom: -130px;
-            right: -70px;}
-    
-            .p41 {bottom: -120px;
-            right: 20px;}
-            .p42 {bottom: -180px;
-            right: 0;}
-            */
+            
     
             $(this).find('.p11').css({'bottom':110+(y/10),'right':110+(x/10)})
             $(this).find('.p12').css({'bottom':-40-(y/10),'right':130-(x/10)})
