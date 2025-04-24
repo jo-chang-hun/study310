@@ -1,0 +1,308 @@
+/* 언어설정 */
+@charset "UTF-8";
+
+/* ResetCSS*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+/* 기본설정 */
+body {
+    background-color: #ddd;
+    width: 100%;
+    height: 1800px;
+    background: linear-gradient(to right, black, red );
+}
+
+/* 네비설정 */
+nav {
+    position: fixed;
+    left: 60px;
+    top: 50%;
+    margin-top: -300px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+
+/* 슬로건설정 */
+.txt {
+    position: fixed;
+    font-size: 100px;
+    right: 20px;
+    top: 50%;
+    margin-top: -80px;
+    color: #fff;
+    line-height: 0.5;
+    text-align: right;
+}
+
+.txt span {
+    color: rgb(15, 10, 10);
+    font-size: 60px;
+}
+
+.txt em {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+
+
+/* 섹션설정 */
+section {
+    position: fixed;
+    width: 4600px;
+    display: flex;
+    top: 50%;
+    height: 500px;
+    left: 0;
+    margin-top: -250px;
+}
+
+section article {
+    width: 180px;
+    height: 400px;
+    margin: 10px;
+    margin-top: -200px;
+    background-color: #fff;
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+
+}
+
+article h2 {
+    position: absolute;
+    top: 350px;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    place-content: 20px;
+    background-color: #111;
+    opacity: 0.4;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+article:hover h2 {
+    opacity: 0.8;
+}
+
+article h2 a {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 3.5;
+    color: #fff;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+}
+
+article strong {
+    display: block;
+    position: absolute;
+    left: 0;
+top: 0;
+width: 100%;
+height: 400px;
+    opacity: 0.4;
+overflow: hidden;
+text-align: center;
+    transition: all 0.5s;}
+article:hover strong {opacity: 1;}
+article strong img{height: 100%;
+                width: auto;
+                position: absolute;
+                left: -60px;
+                }
+
+
+
+
+
+article p {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    margin-top: 0;
+    width: 100%;
+    height: 0;
+    text-align: center;
+    overflow: hidden;
+    background-color: #fff;
+    opacity: 0;
+    transition: all 0.8s;
+}
+article p img {width: auto;
+            height: 100%;}
+
+/* article em {position: absolute;
+            bottom: 50px;
+        right: -300px;
+    z-index: 2;
+display: inline-block;
+box-sizing: border-box;
+    padding:10px 20px;
+background-color: #000;
+color: #fff;
+opacity: 0.8;
+transition: all 1s;} */
+
+section span {position: absolute;
+            top: 110px;
+        right: -300px;
+    z-index: 3;
+font-size: 20px;
+color: #fff;
+cursor: pointer;
+}
+
+
+
+
+article.on {
+    width: 780px;
+    height: 500px;
+    margin-top: -250px;
+}
+article.on h2 {top: 100px;
+                height: 100px;
+                background-color: #111;
+            opacity: 0.3;}
+article.on h2 a {font-size: 30px;
+                color: #fff;}
+article.on strong {opacity: 0;}
+article.on p {height: 500px;
+margin-top: -250px;
+opacity: 1;}
+article.on em {right: 20px;}
+article.on span {right: 20px;}
+
+/* gnb 설정 */
+/* .gnb {
+    position: fixed;
+    left: 0;
+    top: 40%;
+    margin-top: -120px;
+    z-index: 999;
+} */
+
+ul.gnb {
+    position: fixed;
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+.gnb li {
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    font-family: "Righteous", serif;
+    font-size: 14px;
+    border-top: 1px solid #fff;
+    box-sizing: border-box;
+    text-align: right;
+    opacity: 0.8;
+    transition: all 0.5s;
+
+}
+
+.gnb li:hover {
+    font-size: 24px;
+    opacity: 1;
+}
+
+.gnb li:nth-child(1):hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.gnb li:nth-child(2):hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.gnb li:nth-child(3):hover {
+    color: #fff;
+    border-color: #fff;
+}
+.gnb li.on {
+    font-size: 24px;
+    opacity: 1;
+}
+
+.gnb li:nth-child(1).on {
+    color: #fff;
+    border-color: #fff;
+}
+
+.gnb li:nth-child(2).on {
+    color: #fff;
+    border-color: #fff;
+}
+
+.gnb li:nth-child(3).on {
+    color: #fff;
+    border-color: #fff;
+}
+
+
+/* 메뉴 항목 스타일
+ul.gnb li {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+
+ul.gnb li.on {
+    background-color: #333;
+    color: #fff;
+}
+
+
+ul.gnb li:hover {
+    background-color: #ddd;
+}
+
+
+@media (max-width: 600px) {
+    ul.gnb {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul.gnb li {
+        width: 100%;
+        text-align: center;
+    }
+} */

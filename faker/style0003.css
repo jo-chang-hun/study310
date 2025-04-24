@@ -1,0 +1,335 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ===== 초기화 ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+ul, ol { list-style: none; }
+a { text-decoration: none; color: #bbb; }
+img { border: none; vertical-align: bottom; }
+body { font-family: "Raleway", sans-serif; }
+
+/* ===== 배경 및 기본 스타일 ===== */
+body {
+    width: 100%;
+    height: 1800px;
+    background: linear-gradient(to right, black, red);
+}
+
+/* ===== wrap 영역 (비디오 배경용) ===== */
+.wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    min-width: 1024px;
+    min-height: 768px;
+    background-image: url(img/bg1.jpg);
+    background-size: cover;
+    background-position: left bottom;
+    left: 0;
+    top: 0;
+}
+
+/* ===== 공통 텍스트 영역 ===== */
+.txt {
+    position: fixed;
+    font-size: 100px;
+    right: 20px;
+    top: 50%;
+    margin-top: -80px;
+    color: #fff;
+    line-height: 0.5;
+    text-align: right;
+}
+.txt span {
+    color: rgb(15, 10, 10);
+    font-size: 60px;
+}
+.txt em {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* ===== 네비게이션 nav ===== */
+nav {
+    position: fixed;
+    left: 60px;
+    top: 50%;
+    margin-top: -300px;
+}
+nav ul {
+    display: flex;
+}
+nav li {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+/* ===== GNB (탭 메뉴) ===== */
+/* gnb 설정 */
+/* .gnb {
+    position: fixed;
+    left: 0;
+    top: 40%;
+    margin-top: -120px;
+    z-index: 999;
+} */
+
+ul.gnb {
+    position: fixed;
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+.gnb li {
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    font-family: "Righteous", serif;
+    font-size: 14px;
+    border-top: 1px solid #fff;
+    box-sizing: border-box;
+    text-align: right;
+    opacity: 0.8;
+    transition: all 0.5s;
+
+}
+
+.gnb li:hover {
+    font-size: 24px;
+    opacity: 1;
+}
+
+.gnb li:nth-child(1):hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.gnb li:nth-child(2):hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.gnb li:nth-child(3):hover {
+    color: #fff;
+    border-color: #fff;
+}
+.gnb li.on {
+    font-size: 24px;
+    opacity: 1;
+}
+
+.gnb li:nth-child(1).on {
+    color: #fff;
+    border-color: #fff;
+}
+
+.gnb li:nth-child(2).on {
+    color: #fff;
+    border-color: #fff;
+}
+
+.gnb li:nth-child(3).on {
+    color: #fff;
+    border-color: #fff;
+}
+
+/* ===== 탭 영역 표시 ===== */
+.tab-section { display: none; }
+.tab-section.on { display: block; }
+
+
+
+
+/* ===== 이미지 갤러리 섹션 ===== */
+section#gallery {
+    position: fixed;
+    width: 4600px;
+    display: flex;
+    top: 50%;
+    height: 500px;
+    left: 0;
+    margin-top: -250px;
+}
+section#gallery article {
+    width: 180px;
+    height: 400px;
+    margin: 10px;
+    margin-top: -200px;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    top: 50%;
+}
+section#gallery article h2 {
+    position: absolute;
+    top: 350px;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #111;
+    opacity: 0.4;
+    z-index: 2;
+    transition: all 0.5s;
+}
+section#gallery article:hover h2 { opacity: 0.8; }
+section#gallery article h2 a {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 3.5;
+    color: #fff;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+}
+section#gallery article strong {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 400px;
+    opacity: 0.4;
+    text-align: center;
+    transition: all 0.5s;
+}
+section#gallery article:hover strong { opacity: 1; }
+section#gallery article strong img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    left: -60px;
+}
+section#gallery article p {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.8s;
+    text-align: center;
+    z-index: 1;
+}
+section#gallery article p img {
+    width: auto;
+    height: 100%;
+}
+section#gallery article span {
+    position: absolute;
+    top: 110px;
+    right: -300px;
+    z-index: 3;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+section#gallery article.on {
+    width: 780px;
+    height: 500px;
+    margin-top: -250px;
+}
+section#gallery article.on h2 {
+    top: 100px;
+    height: 100px;
+    background-color: #111;
+    opacity: 0.3;
+}
+section#gallery article.on h2 a {
+    font-size: 30px;
+    color: #fff;
+}
+section#gallery article.on strong {
+    opacity: 0;
+}
+section#gallery article.on p {
+    height: 500px;
+    margin-top: -250px;
+    opacity: 1;
+}
+section#gallery article.on span {
+    right: 20px;
+}
+
+/* ===== 비디오 섹션 ===== */
+section#video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+section#video article {
+    float: right;
+    width: 12%;
+    height: 100%;
+    background-image: url(img/divider.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    position: relative;
+    overflow: hidden;
+}
+section#video article h2 {
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border-left: 3px solid #555;
+    font-size: 20px;
+    color: #666;
+    transition: all 0.5s;
+    z-index: 3;
+}
+section#video article div {
+    position: absolute;
+    left: 0;
+    top: 300px;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 2;
+    transition: all 0.5s;
+}
+section#video article:hover div {
+    height: 70px;
+    top: 265px;
+}
+section#video article:hover h2 {
+    color: #ccc;
+    border-left: 3px solid #ccc;
+}
+section#video article video {
+    position: absolute;
+    left: -500px;
+    top: 0;
+    height: 100%;
+    width: auto;
+    z-index: 1;
+    opacity: 0;
+}
+section#video article h3 {
+    position: absolute;
+    font-size: 40px;
+    bottom: 240px;
+    text-align: right;
+    width: 100%;
+    color: #fff;
+    z-index: 4;
+    right: -310px;
+}
+section#video article p {
+    position: absolute;
+    font-size: 25px;
+    bottom: 50px;
+    text-align: right;
+    width: 300px;
+    color: #fff;
+    z-index: 5;
+    right: -310px;
+}
